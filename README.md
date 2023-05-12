@@ -7,7 +7,7 @@
 5. Use exchanger
 
 
-## Exchanger features (everybody)
+## Exchanger features (everyone)
 - Sell tokens (`sell`)
 - Buy tokens (`purchase`)
 
