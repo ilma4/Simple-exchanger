@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
 
-// pragma solidity 0.8;
 pragma solidity >=0.8 <0.9;
 
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
@@ -17,6 +16,7 @@ contract Exchanger is Ownable {
 
 
     constructor(uint256 _exchangeRate, address _token) {
+        require(_exchangeRate >= 1);
         exchangeRate = _exchangeRate;
         token = IERC20(_token);
     }
@@ -50,6 +50,7 @@ contract Exchanger is Ownable {
     function fillWei() onlyOwner isAlive public payable {}
 
     function setExchangeRate(uint256 rate) onlyOwner isAlive public {
+        require(rate >= 1);
         exchangeRate = rate;
     }
 
