@@ -26,6 +26,9 @@ contract Exchanger is Ownable {
         _;
     }
 
+    function getExchangeRate() isAlive public{
+        return exchangeRate;
+    } 
 
     function purchase(uint256 amount) public payable isAlive {
         uint256 requiredWei = amount * exchangeRate;
