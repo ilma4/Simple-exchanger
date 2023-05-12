@@ -10,6 +10,7 @@
 ## Exchanger features (everyone)
 - Sell tokens (`sell`)
 - Buy tokens (`purchase`)
+- Get exchange rate (`getExchangeRate`)
 
 ## Exchanger features (only owner)
 - Send wei to the exchanger (`fillWei`)
